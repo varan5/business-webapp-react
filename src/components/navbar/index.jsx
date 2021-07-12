@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import { Button } from '../button'
 import { Logo } from '../logo'
 import { Marginer } from '../marginer'
 import { scroller } from 'react-scroll'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const NavbarContainer = styled.div`
   width: 100%;
@@ -35,6 +37,10 @@ const scrollToNextSection = () => {
   scroller.scrollTo('servicesSection', { smooth: true, duration: 1500 })
 }
 export function Navbar(props) {
+  useEffect(() => {
+    toast.success('Welcome!')
+  }, [])
+
   return (
     <NavbarContainer>
       <BrandContainer>
@@ -46,6 +52,7 @@ export function Navbar(props) {
         </Button>
         <Marginer direction="horizontal" margin="8px" />
         <LoginButton small>Login</LoginButton>
+        <ToastContainer className="toast-container" />
       </AccessibilityContainer>
     </NavbarContainer>
   )

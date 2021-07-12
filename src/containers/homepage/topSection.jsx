@@ -1,7 +1,6 @@
 import React from 'react'
 import { Element, scroller } from 'react-scroll'
 import styled from 'styled-components'
-
 import BackgroundImg from '../../assets/pictures/company_team.jpg'
 import { Button } from '../../components/button'
 import { DownArrow } from '../../components/downArrow'
